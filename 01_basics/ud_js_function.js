@@ -59,26 +59,44 @@ console.log(inBetween(5));
 
 //3
 function getMathResult(num, progressive) {
-    // let sum = 0;
-    // return num + num, progressive++;
-    for (let i = 0; i <= num; i++) {
-        for (let j = 0; i+i; j <= progressive; i+i) {
-            console.log(num, progressive);
+    if (typeof (progressive) !== 'number' || progressive <= 0) {
+        return num;
+    }
+
+    let str = '';
+
+    for (let i = 1; i <= progressive; i++) {
+        if (i === progressive) {
+            str += `${num * i}`;
+        } else {
+            str += `${num * i}---`;
         }
     }
+    return str;
 }
 getMathResult();
-console.log(getMathResult(5, 3));
+console.log(getMathResult(2, 2));
 
-numbers = [1, 2, 3, 4, 5];
 
-function doubling(number) {
-    number *= 2;
-    return number;
+function getMathResult(num, times) {
+    if (typeof (times) !== 'number' || times <= 0) {
+        return num;
+    }
+
+    let str = '';
+
+    for (let i = 1; i <= times; i++) {
+        if (i === times) {
+            str += `${num * i}`;
+            // Тут без черточек в конце
+        } else {
+            str += `${num * i}---`;
+            // Это тоже самое, что и
+            // str = str + num * i + "---"
+        }
+    }
+
+    return str;
 }
 
-obj = {};
-for (var i = 0; i < numbers.length; i++)
-    doubled = doubling(numbers[i]);
-obj[numbers[i]] = doubled;
-console.log(obj);
+getMathResult(10, 5);
