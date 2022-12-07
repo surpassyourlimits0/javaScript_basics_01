@@ -75,3 +75,21 @@ function writeYourGeneres() {
    }
 }
 writeYourGeneres();
+
+// Problem!
+
+function calculateVolumeAndArea(cub) {
+   if (typeof (cub) !== 'number' || cub < 0 || !Number.isInteger(cub)) {
+      return "error";
+   }
+   let volume = 0,
+      area = 0;
+
+   volume = cub * cub * cub;
+   area = 6 * (cub * cub);
+
+   return `Объем куба: ${volume}, площадь всей поверхности: ${area}`;
+
+}
+calculateVolumeAndArea(5);
+console.log(calculateVolumeAndArea(5));
