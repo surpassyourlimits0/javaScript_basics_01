@@ -118,15 +118,41 @@ function getTimeFromMinutes(timesTamp) {
     let hour = Math.floor(timesTamp / 60);
     let min = timesTamp % 60;
 
-    return `"Это ${hour} часа и  ${min} минут"`;
+    let hourStr = '';
+
+    switch (hour) {
+        case 0:
+            hourStr = 'часов';
+            break;
+        case 1:
+            hourStr = 'час';
+            break;
+        case 2:
+        case 3:
+        case 4:
+            hourStr = 'часа';
+            break;
+        default:
+            hourStr = 'часов';
+    }
+
+    return `"Это ${hour} ${hourStr} и  ${min} минут"`;
 
 }// Место для первой задачи
 
-getTimeFromMinutes();
 console.log(getTimeFromMinutes(665));
 
-function getMaxOfArray(numArray) {
-    return Math.max.apply(null, numArray);
+//a
+
+function getMaxMinNum(a, b, c, d) {
+    if (typeof (a) !== 'number' ||
+        typeof (b) !== 'number' ||
+        typeof (c) !== 'number' ||
+        typeof (d) !== 'number') {
+        return 0;
+    } else {
+        return Math.max(a, b, c, d);
+    }
 }
-getMaxOfArray();
-console.log(getMaxOfArray(12, 16, 87));
+console.log(getMaxMinNum(15, 78, 78.9, 45));
+//vs
