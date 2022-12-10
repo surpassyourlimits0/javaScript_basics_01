@@ -156,3 +156,19 @@ function getMaxMinNum(a, b, c, d) {
 }
 console.log(getMaxMinNum(15, 78, 78.9, 45));
 //vs
+
+function sumFibs(num) {
+    var list = [1, 1];
+    var next = list[list.length - 1] + list[list.length - 2];
+
+    while (true) {
+        if (next <= num) {
+            list.push(next);
+            next = list[list.length - 1] + list[list.length - 2]
+        } else {
+            return list;
+        }
+    }
+}
+
+console.log(sumFibs(10));
