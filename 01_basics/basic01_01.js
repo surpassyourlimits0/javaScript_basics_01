@@ -12,67 +12,67 @@
 // let numberOfFilms;
 
 // function start() {
-//    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+//     numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '').trim();
 
-//    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-//       numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
-//    }
+//     while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+//         numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+//     }
 // }
 
 // start();
 
 // const personalMovieDB = {
-//    count: numberOfFilms,
-//    movies: { 'John Wick': '8.8' },
-//    actors: {},
-//    genres: [],
-//    private: false
+//     count: numberOfFilms,
+//     movies: { 'John Wick': '8.8' },
+//     actors: {},
+//     genres: [],
+//     private: false
 // };
 
 // function rememberMyFilms() {
-//    for (let i = 0; i < 2; i++) {
-//       const a = prompt('Один из опследних просмотренных фильмов?', ''),
-//          b = prompt('На сколько оцените его?', '');
-//       if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-//          personalMovieDB.movies[a] = b;
-//          console.log('done!');
-//       } else {
-//          i--;
-//          console.log('error!');
-//       }
+//     for (let i = 0; i < 2; i++) {
+//         const a = prompt('Один из опследних просмотренных фильмов?', ''),
+//             b = prompt('На сколько оцените его?', '');
+//         if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+//             personalMovieDB.movies[a] = b;
+//             console.log('done!');
+//         } else {
+//             i--;
+//             console.log('error!');
+//         }
 
-//    }
+//     }
 // }
 
 // rememberMyFilms();
 
 // function detectPersonalLevel() {
-//    if (numberOfFilms < 10) {
-//       console.log("Просмотрено довольно мало фильмов");
-//    } else if (numberOfFilms >= 10 && numberOfFilms < 30) {
-//       console.log("Вы классический зритель");
-//    } else if (numberOfFilms >= 30) {
-//       console.log("Вы киноман!");
-//    } else {
-//       console.log("Error");
-//    }
+//     if (numberOfFilms < 10) {
+//         console.log("Просмотрено довольно мало фильмов");
+//     } else if (numberOfFilms >= 10 && numberOfFilms < 30) {
+//         console.log("Вы классический зритель");
+//     } else if (numberOfFilms >= 30) {
+//         console.log("Вы киноман!");
+//     } else {
+//         console.log("Error");
+//     }
 // }
 
 // detectPersonalLevel();
 
 // function showMyDB(hidden) {
-//    if (!hidden) {
-//       console.log(personalMovieDB);
-//    }
+//     if (!hidden) {
+//         console.log(personalMovieDB);
+//     }
 // }
 // showMyDB(personalMovieDB.private);
 
 // function writeYourGeneres() {
-//    for (let i = 1; i <= 3; i++) {
+//     for (let i = 1; i <= 3; i++) {
 
-//       personalMovieDB.genres[i - 1] = prompt(`your faavorite in num:${i}`);
+//         personalMovieDB.genres[i - 1] = prompt(`your faavorite in num:${i}`);
 
-//    }
+//     }
 // }
 // writeYourGeneres();
 
@@ -110,65 +110,95 @@
 
 //JavaScript clock!!!!!!!!!!
 
-function getTimeFromMinutes(timesTamp) {
-    if (typeof (timesTamp) !== 'number' || timesTamp < 0 || !Number.isInteger(timesTamp)) {
-        return "Ошибка, проверьте данные";
-    }
+// function getTimeFromMinutes(timesTamp) {
+//     if (typeof (timesTamp) !== 'number' || timesTamp < 0 || !Number.isInteger(timesTamp)) {
+//         return "Ошибка, проверьте данные";
+//     }
 
-    let hour = Math.floor(timesTamp / 60);
-    let min = timesTamp % 60;
+//     let hour = Math.floor(timesTamp / 60);
+//     let min = timesTamp % 60;
 
-    let hourStr = '';
+//     let hourStr = '';
 
-    switch (hour) {
-        case 0:
-            hourStr = 'часов';
-            break;
-        case 1:
-            hourStr = 'час';
-            break;
-        case 2:
-        case 3:
-        case 4:
-            hourStr = 'часа';
-            break;
-        default:
-            hourStr = 'часов';
-    }
+//     switch (hour) {
+//         case 0:
+//             hourStr = 'часов';
+//             break;
+//         case 1:
+//             hourStr = 'час';
+//             break;
+//         case 2:
+//         case 3:
+//         case 4:
+//             hourStr = 'часа';
+//             break;
+//         default:
+//             hourStr = 'часов';
+//     }
 
-    return `"Это ${hour} ${hourStr} и  ${min} минут"`;
+//     return `"Это ${hour} ${hourStr} и  ${min} минут"`;
 
-}// Место для первой задачи
+// }// Место для первой задачи
 
-console.log(getTimeFromMinutes(665));
+// console.log(getTimeFromMinutes(665));
 
-//a
+// //a
 
-function getMaxMinNum(a, b, c, d) {
-    if (typeof (a) !== 'number' ||
-        typeof (b) !== 'number' ||
-        typeof (c) !== 'number' ||
-        typeof (d) !== 'number') {
-        return 0;
-    } else {
-        return Math.max(a, b, c, d);
-    }
-}
-console.log(getMaxMinNum(15, 78, 78.9, 45));
-//vs
+// function getMaxMinNum(a, b, c, d) {
+//     if (typeof (a) !== 'number' ||
+//         typeof (b) !== 'number' ||
+//         typeof (c) !== 'number' ||
+//         typeof (d) !== 'number') {
+//         return 0;
+//     } else {
+//         return Math.max(a, b, c, d);
+//     }
+// }
+// console.log(getMaxMinNum(15, 78, 78.9, 45));
+// //vs
 
-function sumFibs(num) {
-    var list = [1, 1];
-    var next = list[list.length - 1] + list[list.length - 2];
+// function sumFibs(num) {
+//     var list = [1, 1];
+//     var next = list[list.length - 1] + list[list.length - 2];
 
-    while (true) {
-        if (next <= num) {
-            list.push(next);
-            next = list[list.length - 1] + list[list.length - 2]
-        } else {
-            return list;
-        }
-    }
-}
+//     while (true) {
+//         if (next <= num) {
+//             list.push(next);
+//             next = list[list.length - 1] + list[list.length - 2];
+//         } else {
+//             return list;
+//         }
+//     }
+// }
 
-console.log(sumFibs(10));
+// console.log(sumFibs(10));
+
+// function fib(num) {
+//     let list = [1, 1];
+//     let finonachi = list[list.length - 1] + list[list.length - 2];
+
+//     while (true) {
+//         if (finonachi <= num) {
+//             list.push(finonachi);
+//             finonachi = list[list.length - 1] + list[list.length - 2];
+//         } else {
+//             return list;
+//         }
+//     }
+// }
+// console.log(fib(5527939700884757));
+// //vs
+// function fib(n) {
+//     let a = 1;
+//     let b = 1;
+//     for (let i = 3; i <= n; i++) {
+//         let c = a + b;
+//         a = b;
+//         b = c;
+//     }
+//     return b;
+// }
+
+// console.log(fib());
+
+alert(`i'm threed script`);

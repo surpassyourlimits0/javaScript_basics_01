@@ -165,3 +165,5 @@
 
 //     alert(i); // простое число
 // }
+
+alert(`i'm second script`);

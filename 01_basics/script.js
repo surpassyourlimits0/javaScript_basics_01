@@ -352,3 +352,5 @@
 
 // let func2 = (x, y) => { return x + y; };
 // console.log(func2(2, 2));
+// prompt(`Hello Erlan`);
+alert(`i'm first script`);
