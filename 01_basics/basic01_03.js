@@ -5,4 +5,4 @@ rabbit.run = function (n) {
 rabbit.run(60);
 /*******Методы - это функции, хранящиеся в виде свойств объекта.*/
 
-function this1() {
+function this1() { dddddddddds;
