@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "pnp.polacode"
+        "pnp.polacode",
+        "hwencc.html-tag-wrapper"
     ]
 }
