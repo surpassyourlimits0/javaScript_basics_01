@@ -7,14 +7,55 @@
 
 //! Protatyp
 
-const person = new Object ({
+// const person = new Object ({
+//    name: 'Erlan',
+//    age: 22,
+//    future: function () {
+//       console.log('Future ');
+      
+//    }
+// });
+
+// Object.prototype.sayHello = function  (){
+//    console.log('FullStack');
+// };
+// person.sayHello();
+
+// const lena = Object.create(person);
+
+// //*? const arr = [1,2,3,4,5,6,7];
+
+// arr.push(12);
+// arr.pop();
+// console.log(arr);
+
+//! THIS
+
+function hello() {
+   console.log('Hello', this);  
+}
+
+const person = {
    name: 'Erlan',
    age: 22,
-   future: 'Undefinde!'
-});
-
-Object.prototype.sayHello = function  (){
-   console.log('FullStack');
-   
+   sayHello: hello,
+   sayHelloWindow: hello.bind(this),
+   logInfo: function (job, phone) {
+      console.group(`${this.name} info:`);
+      console.log(`Name is ${this.name}`);
+      console.log(`Age is ${this.age}`);
+      console.log(`job is : ${job}`);
+      console.log(`job is : ${phone}`);
+      console.groupEnd();
+      
+      
+   }
 };
-person.sayHello();
+person.logInfo();
+
+const lena = {
+   name: 'Elena',
+   age: 23
+};
+
+const AllLogInfo = person.logInfo.bind(lena, 'Frontend', '+996504482021')();
