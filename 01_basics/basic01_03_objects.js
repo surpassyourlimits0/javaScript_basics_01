@@ -31,31 +31,51 @@
 
 //! THIS
 
-function hello() {
-   console.log('Hello', this);  
-}
+// !function hello() {
+//    console.log('Hello', this);  
+// }
 
-const person = {
+// const person = {
+//    name: 'Erlan',
+//    age: 22,
+//    sayHello: hello,
+//    sayHelloWindow: hello.bind(this),
+//    logInfo: function (job, phone) {
+//       console.group(`${this.name} info:`);
+//       console.log(`Name is ${this.name}`);
+//       console.log(`Age is ${this.age}`);
+//       console.log(`job is : ${job}`);
+//       console.log(`job is : ${phone}`);
+//       console.groupEnd();
+      
+      
+//    }
+// };
+// person.logInfo();
+
+// const erl = {
+//    name: 'Erlan',
+//    surneme: 'Paz',
+//    age: 23
+// }; 
+// Object.defineProperty(erl, "name", {
+//    writable: false
+// });
+
+// // const AllLogInfo = person.logInfo.bind(lena, 'Frontend', '+996504482021')();
+
+// let descriptor = Object.getOwnPropertyDescriptors(lena, 'name');
+
+// console.log(JSON.stringify(descriptor,null,2));
+
+let erl = {
    name: 'Erlan',
-   age: 22,
-   sayHello: hello,
-   sayHelloWindow: hello.bind(this),
-   logInfo: function (job, phone) {
-      console.group(`${this.name} info:`);
-      console.log(`Name is ${this.name}`);
-      console.log(`Age is ${this.age}`);
-      console.log(`job is : ${job}`);
-      console.log(`job is : ${phone}`);
-      console.groupEnd();
-      
-      
+   surneme: 'Paz',
+   age: 23,
+   get fullName() {
+   return `${this.name} ${this.surneme}`;
    }
-};
-person.logInfo();
 
-const lena = {
-   name: 'Elena',
-   age: 23
 };
+console.log(erl.fullName);
 
-const AllLogInfo = person.logInfo.bind(lena, 'Frontend', '+996504482021')();
